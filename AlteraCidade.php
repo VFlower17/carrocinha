@@ -1,3 +1,12 @@
+<?php
+    include('includes/conexao.php');
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM cidade WHERE id=$id";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_array($result);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
