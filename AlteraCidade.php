@@ -8,7 +8,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,23 +17,26 @@
 </head>
 <body>
     <header>
-        <a href="CadastroCidade.html/..">Voltar</a>
+        <a href="AlteraCidade.php/..">Voltar</a>
     </header>
-    <form action="CadastrarCidade.php" method="post">
+    <form action="AlteraCidadeExe.php" method="post">
         <div>
             <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome">
+            <input type="text" name="nome" id="nome" value="<?php echo $row['nome']?>">
         </div>
         <div>
             <label for="estado">Estado</label>
             <select name="estado" id="estado">
-                <option value="SP">SP</option>
-                <option value="MG">MG</option>
-                <option value="RJ">RJ</option>
+                <option value="SP" <?php echo $row['estado'] == "SP" ? "selected" : "" ?>>SP</option>
+                <option value="MG" <?php echo $row['estado'] == "MG" ? "selected" : "" ?>>MG</option>
+                <option value="RJ" <?php echo $row['estado'] == "RJ" ? "selected" : "" ?>>RJ</option>
             </select>
         </div>
         <div>
-            <button type="submit">CADASTRAR</button>
+            <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+        </div>
+        <div>
+            <button type="submit">ALTERAR</button>
         </div>
     </form>
 </body>

@@ -38,7 +38,7 @@
                     echo "<td>".$row['endereco']."</td>";
                     echo "<td>".$row['bairro']."</td>";
                     echo "<td>".$row['cep']."</td>";
-                    echo "<td>Alterar</td>";
+                    echo "<td><a href='AlteraPessoa.php?id=".$row['id']."'>Alterar</a></td>";
                     echo "<td>Deletar</td>";
                     echo "</tr>";
                 }

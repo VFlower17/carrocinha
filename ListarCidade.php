@@ -32,7 +32,7 @@
                     echo "<td>".$row['id']."</td>";
                     echo "<td>".$row['nome']."</td>";
                     echo "<td>".$row['estado']."</td>";
-                    echo "<td>Alterar</td>";
+                    echo "<td><a href='AlteraCidade.php?id=".$row['id']."'>Alterar</a></td>";
                     echo "<td>Deletar</td>";
                     echo "</tr>";
                 }
